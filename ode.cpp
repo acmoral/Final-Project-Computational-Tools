@@ -26,7 +26,7 @@ int main (void)
   std::vector<double> x(6);
   init_y(y);
   init_x(x,y);/*parametros alpha y beta*/
-  
+   std::cout<<t<<"\t"<<y[0]<<"\t"<<y[1]<<"\t"<<y[2]<<"\t"<<y[3]<<std::endl;
   euler(t,tf,time_step,y,x);
   return 0;
 }
@@ -84,14 +84,14 @@ void init_y(std::vector<double> &y)
     {
       if(id==0)
 	{
-	  y[id]=30.0;
+	  y[id]=-70.0;
 	}
       else if (id>0)
 	{
 	  y[id]=dis(gen);
 	  if(id==4)
 	    {
-	      y[id]=7.0;
+	      y[id]=0.0;
 	    }
 	}
     }
